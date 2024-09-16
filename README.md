@@ -1,17 +1,17 @@
-Project Title
+**Project Title**
 Prewave alert term extractor
 
-Description
+**Description**
 Query prewave apis and extract specic term information from text
 
-Getting Started
+**Getting Started**
 https://go.dev/doc/install
 
-Executing program
+**Executing program**
 1. clone repo
-2. naviate to root of repo
+2. navigate to root of repo
 3. _go run run main.go at_extractor.go at_processor.go_
 
-Output
+**Output**
 A results file will be genenated in the root of the repo
 
