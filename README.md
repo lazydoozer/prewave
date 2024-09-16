@@ -2,7 +2,7 @@
 Prewave alert term extractor
 
 **Description**
-Query prewave apis and extract specic term information from text
+Query prewave apis and extract specific term information from text
 
 **Getting Started**
 https://go.dev/doc/install
