@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Prewave API
+  version: 0.0.1
+
+servers:
+  - url: https://services.prewave.ai/adminInterface/api/
+  
+paths:
+  /testQueryTerm:
+    get:
+      summary: Returns a list query terms
+      responses:
+        '200':
+          description: A json array OF query terms
+          content:
+            application/json:
+             schema:
+              $ref: '#/components/schemas/QueryTerms'   
+    
+  /testAlerts:
+    get:
+      summary: Returns a list alerts
+      responses:
+        '200':
+          description: A json array OF alerts
+          content:
+            application/json:
+             schema:
+              $ref: '#/components/schemas/Alerts'  
+              
+components:
+  schemas:
+    QueryTerms:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: integer
+          target:
+            type: integer
+          text:
+            type: string
+          language:
+            type: string
+          keepOrder:
+            type: boolean
+      example:
+        - id: 101
+          target: 1
+          text: IG Metall
+          language: de
+          keepOrder: true
+          
+        - id: 20
+          target: 2
+          text: IG Metally
+          language: en
+          keepOrder: false
+  
+    Alerts:
+      type: array
+      items:
+        type: object
+        properties:
+          id:
+            type: string
+          contents:
+            type: array
+            items:
+              type: object
+              properties:
+                text:
+                  type: string
+                type:
+                  type: string
+                language:
+                  type: string
+          date:
+            type: string
+          inputType:
+            type: string
+
+            

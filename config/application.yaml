@@ -1,0 +1,13 @@
+prewave:
+  api:
+    path: https://services.prewave.ai/adminInterface/api   
+    key: key=fergal:ac728eef0cc901a30a96a7881948eaa937ecb6d3e0447cfe189c1df54959e9f5
+    timeout: 500
+  file-results: prewave_results.json
+  mode: test
+  file-test-alerts: test_data/alerts.json
+  file-test-terms: test_data/terms.json
+
+  
+
+  

@@ -1,0 +1,75 @@
+{
+  "alerts_processed": 5,
+  "terms_scanned_per_alert": 25,
+  "created_date": "2024-09-16T14:20:16+01:00",
+  "matches": [
+    {
+      "alert_id": "uktt4245t3t4334",
+      "alert_text": "Sales Punching faking sales numbers Hey, SEC, look at Tesla",
+      "terms": [
+        {
+          "term_id": "601",
+          "term_text": "tesla",
+          "occurances": 1
+        },
+        {
+          "term_id": "1102",
+          "term_text": "faking",
+          "occurances": 1
+        },
+        {
+          "term_id": "501",
+          "term_text": "close",
+          "occurances": 1
+        },
+        {
+          "term_id": "601",
+          "term_text": "tesla",
+          "occurances": 1
+        }
+      ]
+    },
+    {
+      "alert_id": "hz5n855393tn",
+      "alert_text": "MÜNCHEN (dpa-AFX) - Die IG Metall erwartet einen heißen Herbst mit vielen Auseinandersetzungen um Jobs, in Deutschland. Es wird um viele Arbeitsplätze gehen, sagte Vorstandsmitglied und Hauptkassierer Jürgen Kerner am Mittwochabend in München. Alleine in den Branchen, für die die Gewerkschaft zuständig sei, stünden ungefähr 300 000 Jobs im Feuer. Der größte Bereich dabei seien die Automobilindustrie und deren Zulieferer, doch auch anderen Branchen seien betroffen.",
+      "terms": [
+        {
+          "term_id": "101",
+          "term_text": "ig metall",
+          "occurances": 1
+        },
+        {
+          "term_id": "103",
+          "term_text": "metall",
+          "occurances": 1
+        },
+        {
+          "term_id": "202",
+          "term_text": "arbeitsplätze",
+          "occurances": 1
+        },
+        {
+          "term_id": "204",
+          "term_text": "jobs",
+          "occurances": 2
+        }
+      ]
+    },
+    {
+      "alert_id": "6gbujhu89786",
+      "alert_text": "Wolfgang Lemb, ig metall Germany stands in solidarity with #StrikeForBlackLives",
+      "terms": [
+        {
+          "term_id": "101",
+          "term_text": "ig metall",
+          "occurances": 1
+        },
+        {
+          "term_id": "103",
+          "term_text": "metall",
+          "occurances": 1
+        }
+      ]
+    }
+  ]
+}
