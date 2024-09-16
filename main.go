@@ -4,10 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"net/http"
 	"os"
-	"prewave/api"
 	"time"
 
+	"github.com/lazydoozer/prewave/api"
+
+	"github.com/labstack/echo/v4"
 	"github.com/spf13/viper"
 )
 
@@ -73,6 +76,19 @@ func main() {
 		os.Exit(0)
 	}
 	fmt.Println("prewave query terms to alert analysis is complete, see:", fileName, "for results")
+
+	e := echo.New()
+
+	e.GET("/health", func(c echo.Context) error {
+		return c.JSONPretty(http.StatusOK, result, indent)
+	})
+
+	httpPort := os.Getenv("PORT")
+	if httpPort == "" {
+		httpPort = "8080"
+	}
+
+	e.Start(":" + httpPort)
 }
 
 func (r result) saveToFile(fileName string) error {

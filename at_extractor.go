@@ -7,9 +7,9 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"prewave/api"
 	"strings"
 
+	"github.com/lazydoozer/prewave/api"
 	"github.com/spf13/viper"
 )
 

@@ -28,8 +28,8 @@ type termMatch struct {
 }
 
 func runMatchAnalysis(alerts []alert, terms []term) (result, error) {
-	if len(alerts) || len(terms) == 0 {
-		return nil, fmt.Errorf("invalid input, cannot perform match analysis")
+	if len(alerts) == 0 || len(terms) == 0 {
+		return result{}, fmt.Errorf("invalid input, cannot perform match analysis")
 	}
 
 	//create a blank results list
@@ -87,7 +87,7 @@ func (r *alertTermMatch) AddItem(tm termMatch) []termMatch {
 	return r.TermMatch
 }
 
-func containsWholeWord(text string, word string) bool {
+func containsWholeWord(content string, word string) bool {
 	// regular expression to match the word with word boundaries (\b)
 	// \b matches at the start or end of a word
 	pattern := fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(word))
@@ -96,5 +96,5 @@ func containsWholeWord(text string, word string) bool {
 	re := regexp.MustCompile(pattern)
 
 	// Check if the word exists in the text as a whole word
-	return re.MatchString(text)
+	return re.MatchString(content)
 }
