@@ -13,5 +13,5 @@ https://go.dev/doc/install
 3. _go run run main.go at_extractor.go at_processor.go_
 
 **Output**
-A results file will be genenated in the root of the repo
+A results file(prewave_results.json) will be genenated in the root of the repo
 
