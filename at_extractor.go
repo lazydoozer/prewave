@@ -27,13 +27,13 @@ type term struct {
 }
 
 type alert struct {
-	Id        string     `json:"id"`
-	Contents  []contents `json:"contents,omitempty"`
-	Date      string     `json:"date,omitempty"`
-	InputType string     `json:"inputType,omitempty"`
+	Id        string    `json:"id"`
+	Contents  []content `json:"contents,omitempty"`
+	Date      string    `json:"date,omitempty"`
+	InputType string    `json:"inputType,omitempty"`
 }
 
-type contents struct {
+type content struct {
 	Text     string `json:"text,omitempty"`
 	Type     string `json:"type,omitempty"`
 	Language string `json:"language,omitempty"`
@@ -93,8 +93,8 @@ func (e *extractor) getQueryTerms() ([]term, error) {
 	return queryTerms, nil
 }
 
-func scrubQueryTerms(qt []term) ([]term, error) {
-	if len(qt) == 0 {
+func scrubQueryTerms(t []term) ([]term, error) {
+	if len(t) == 0 {
 		return nil, fmt.Errorf("input query terms is empty")
 	}
 
@@ -103,7 +103,7 @@ func scrubQueryTerms(qt []term) ([]term, error) {
 	// Pre-process the terms: convert to lowercase and split if needed
 	scrubbedTerms := []term{}
 
-	for _, t := range qt {
+	for _, t := range t {
 		termTextLower := strings.ToLower(t.Text) // Loop through the terms list, adding elements to the map if they haven't been seen before
 
 		if t.KeepOrder {
@@ -175,12 +175,12 @@ func (e *extractor) getTestAlerts() ([]alert, error) {
 	return testAlerts, nil
 }
 
-func getTestData(filename string) ([]byte, error) {
-	if len(filename) == 0 {
+func getTestData(fn string) ([]byte, error) {
+	if len(fn) == 0 {
 		return nil, fmt.Errorf("invalid filename provided")
 	}
 
-	b, err := os.ReadFile(filename)
+	b, err := os.ReadFile(fn)
 
 	if err != nil {
 		return nil, fmt.Errorf("failed to read test data from file: %w", err)
@@ -188,9 +188,9 @@ func getTestData(filename string) ([]byte, error) {
 	return b, nil
 }
 
-func getResponseBody(resp *http.Response) ([]byte, error) {
-	if resp.Body != http.NoBody {
-		b, err := io.ReadAll(resp.Body)
+func getResponseBody(r *http.Response) ([]byte, error) {
+	if r.Body != http.NoBody {
+		b, err := io.ReadAll(r.Body)
 		if err != nil {
 			return nil, fmt.Errorf("failed to read prewave API response body: %w", err)
 		}

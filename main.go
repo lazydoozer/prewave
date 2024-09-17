@@ -27,12 +27,14 @@ func init() {
 }
 
 func main() {
-	fmt.Println("prewave alert term application started")
+	fmt.Println("prewave alert term application started in", viper.GetString("prewave.mode"), "mode")
+
 	c, ctx, cancelFunc, err := createClient()
 	if err != nil {
 		fmt.Println(err, "could not create HTTP API client")
 		os.Exit(0)
 	}
+
 	defer cancelFunc()
 
 	extractor := NewExtractor(c, ctx)
@@ -79,7 +81,7 @@ func main() {
 
 	e := echo.New()
 
-	e.GET("/health", func(c echo.Context) error {
+	e.GET("/results", func(c echo.Context) error {
 		return c.JSONPretty(http.StatusOK, result, indent)
 	})
 
@@ -91,9 +93,9 @@ func main() {
 	e.Start(":" + httpPort)
 }
 
-func (r result) saveToFile(fileName string) error {
+func (r result) saveToFile(fn string) error {
 	j, _ := json.MarshalIndent(r, prefix, indent)
-	return os.WriteFile(fileName, j, os.ModePerm)
+	return os.WriteFile(fn, j, os.ModePerm)
 }
 
 func createClient() (*api.ClientWithResponses, context.Context, context.CancelFunc, error) {
