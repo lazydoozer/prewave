@@ -43,9 +43,9 @@ type prewaveInterceptor struct {
 	apikey string
 }
 
-func NewPrewaveInterceptor(apikey string) *prewaveInterceptor {
+func NewPrewaveInterceptor(k string) *prewaveInterceptor {
 	return &prewaveInterceptor{
-		apikey: apikey,
+		apikey: k,
 	}
 }
 

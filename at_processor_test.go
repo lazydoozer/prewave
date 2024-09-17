@@ -26,7 +26,7 @@ func TestProcessAlert_BasicMatchMultipleOccurances(t *testing.T) {
 	alert := alert{
 		Id: "1",
 		Contents: []content{
-			{Text: "This is a test message test"},
+			{Text: "Test this test message test"},
 		},
 	}
 
@@ -35,8 +35,34 @@ func TestProcessAlert_BasicMatchMultipleOccurances(t *testing.T) {
 	}
 	result := processAlert(alert, terms)
 
+	if len(result.AlertTermMatches) != 1 || len(result.AlertTermMatches[0].TermMatches) != 1 {
+		t.Errorf("Expected 1 term match with multiple occurrences")
+	}
+
+	if result.AlertTermMatches[0].TermMatches[0].Occurances != 3 {
+		t.Errorf("Expected 3 occurrences, got %d", result.AlertTermMatches[0].TermMatches[0].Occurances)
+	}
+}
+
+func TestProcessAlert_MatchMultipleOccurancesHyphen(t *testing.T) {
+	alert := alert{
+		Id: "1",
+		Contents: []content{
+			{Text: "Die Unternehmen werden wegen der Corona-Krise und Strukturanpassungen rund 300.000 Arbeitsplätze allein in der Metallindustrie streichen. Dies befürchtet die Gewerkschaft IG-Metall und kündigt ihren Widerstand an. Im Herbst sei mit größeren Auseinandersetzungen zu rechnen, 'weil für uns klar ist, dass wir in der Krise für jeden Arbeitsplatz kämpfen', sagte IG-Metall-Vorstand Jürgen Kerner im Club Wirtschaftspresse München."},
+		},
+	}
+
+	terms := []term{
+		{Id: 1, Text: "metall"},
+	}
+	result := processAlert(alert, terms)
+
+	if len(result.AlertTermMatches) != 1 || len(result.AlertTermMatches[0].TermMatches) != 1 {
+		t.Errorf("Expected 1 term match with multiple occurrences")
+	}
+
 	if result.AlertTermMatches[0].TermMatches[0].Occurances != 2 {
-		t.Errorf("Expected 2 occurances, got %d", result.AlertTermMatches[0].TermMatches[0].Occurances)
+		t.Errorf("Expected 2 occurrences, got %d", result.AlertTermMatches[0].TermMatches[0].Occurances)
 	}
 }
 

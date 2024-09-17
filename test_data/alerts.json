@@ -1,67 +1,14 @@
-[
+[   
     {
-        "id": "uktt4245t3t4334",
+        "id": "adsfiw359vm32",
         "contents": [
             {
-                "text": "Sales Punching faking sales numbers Hey, SEC, look at Tesla",
-                "type": "text",
-                "language": "en"
-            },
-            {
-                "text": "Tesla Full Self Driving: New update now drives thru Green Lights and auto stops at Red Lights and Stop Signs without interaction. Full Self Self Driving everywhere getting oh so close. Here’s to the future",
-                "type": "text",
-                "language": "en"
-            }
-        ],
-        "date": "2024-09-16T11:54:41.318Z",
-        "inputType": "tweet"
-    },
-    {
-        "id": "rtct54gf34343",
-        "contents": [
-            {
-                "text": "Another disaster for Ferrari.",
+                "text": "Die Unternehmen werden wegen der Corona-Krise und Strukturanpassungen rund 300.000 Arbeitsplätze allein in der Metallindustrie streichen. Dies befürchtet die Gewerkschaft IG-Metall und kündigt ihren Widerstand an. Im Herbst sei mit größeren Auseinandersetzungen zu rechnen, 'weil für uns klar ist, dass wir in der Krise für jeden Arbeitsplatz kämpfen', sagte IG-Metall-Vorstand Jürgen Kerner im Club Wirtschaftspresse München.",
                 "type": "text",
                 "language": "ên"
             }
         ],
         "date": "2024-09-16T11:24:53.318Z",
         "inputType": "tweet"
-    },
-    {
-        "id": "hz5n855393tn",
-        "contents": [
-            {
-                "text": "MÜNCHEN (dpa-AFX) - Die IG Metall erwartet einen heißen Herbst mit vielen Auseinandersetzungen um Jobs, in Deutschland. Es wird um viele Arbeitsplätze gehen, sagte Vorstandsmitglied und Hauptkassierer Jürgen Kerner am Mittwochabend in München. Alleine in den Branchen, für die die Gewerkschaft zuständig sei, stünden ungefähr 300 000 Jobs im Feuer. Der größte Bereich dabei seien die Automobilindustrie und deren Zulieferer, doch auch anderen Branchen seien betroffen.",
-                "type": "short",
-                "language": "de"
-            }
-        ],
-        "date": "2024-09-16T11:24:13.318Z",
-        "inputType": "link"
-    },
-    {
-        "id": "trg5g4tb4tg4red",
-        "contents": [
-            {
-                "text": "@En1Buena Ojalá lo logre eh, y una oferta de Ferrari es inigualable pero la veo fea",
-                "type": "text",
-                "language": "es"
-            }
-        ],
-        "date": "2024-09-16T11:25:47.318Z",
-        "inputType": "tweet"
-    },
-    {
-        "id": "6gbujhu89786",
-        "contents": [
-            {
-                "text": "Wolfgang Lemb, ig metall Germany stands in solidarity with #StrikeForBlackLives",
-                "type": "text",
-                "language": "de"
-            }
-        ],
-        "date": "2024-09-16T11:17:02.660Z",
-        "inputType": "tweet"
-    }
+    }  
 ]

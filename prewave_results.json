@@ -1,87 +1,27 @@
 {
-  "alerts_processed": 5,
+  "alerts_processed": 1,
   "terms_scanned_per_alert": 25,
-  "created_date": "2024-09-17T11:21:36+01:00",
+  "created_date": "2024-09-17T14:17:25+01:00",
   "results": [
     {
-      "alert_id": "uktt4245t3t4334",
+      "alert_id": "adsfiw359vm32",
       "alert_term_matches": [
         {
-          "text": "Sales Punching faking sales numbers Hey, SEC, look at Tesla",
+          "text": "Die Unternehmen werden wegen der Corona-Krise und Strukturanpassungen rund 300.000 Arbeitsplätze allein in der Metallindustrie streichen. Dies befürchtet die Gewerkschaft IG-Metall und kündigt ihren Widerstand an. Im Herbst sei mit größeren Auseinandersetzungen zu rechnen, 'weil für uns klar ist, dass wir in der Krise für jeden Arbeitsplatz kämpfen', sagte IG-Metall-Vorstand Jürgen Kerner im Club Wirtschaftspresse München.",
           "term_matches": [
-            {
-              "id": "601",
-              "text": "tesla",
-              "occurances": 1
-            },
-            {
-              "id": "1102",
-              "text": "faking",
-              "occurances": 1
-            }
-          ]
-        },
-        {
-          "text": "Tesla Full Self Driving: New update now drives thru Green Lights and auto stops at Red Lights and Stop Signs without interaction. Full Self Self Driving everywhere getting oh so close. Here’s to the future",
-          "term_matches": [
-            {
-              "id": "501",
-              "text": "close",
-              "occurances": 1
-            },
-            {
-              "id": "601",
-              "text": "tesla",
-              "occurances": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "alert_id": "hz5n855393tn",
-      "alert_term_matches": [
-        {
-          "text": "MÜNCHEN (dpa-AFX) - Die IG Metall erwartet einen heißen Herbst mit vielen Auseinandersetzungen um Jobs, in Deutschland. Es wird um viele Arbeitsplätze gehen, sagte Vorstandsmitglied und Hauptkassierer Jürgen Kerner am Mittwochabend in München. Alleine in den Branchen, für die die Gewerkschaft zuständig sei, stünden ungefähr 300 000 Jobs im Feuer. Der größte Bereich dabei seien die Automobilindustrie und deren Zulieferer, doch auch anderen Branchen seien betroffen.",
-          "term_matches": [
-            {
-              "id": "101",
-              "text": "ig metall",
-              "occurances": 1
-            },
             {
               "id": "103",
               "text": "metall",
+              "occurances": 2
+            },
+            {
+              "id": "201",
+              "text": "arbeitsplatz",
               "occurances": 1
             },
             {
               "id": "202",
               "text": "arbeitsplätze",
-              "occurances": 1
-            },
-            {
-              "id": "204",
-              "text": "jobs",
-              "occurances": 2
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "alert_id": "6gbujhu89786",
-      "alert_term_matches": [
-        {
-          "text": "Wolfgang Lemb, ig metall Germany stands in solidarity with #StrikeForBlackLives",
-          "term_matches": [
-            {
-              "id": "101",
-              "text": "ig metall",
-              "occurances": 1
-            },
-            {
-              "id": "103",
-              "text": "metall",
               "occurances": 1
             }
           ]

@@ -69,12 +69,12 @@ func processAlert(a alert, t []term) alertMatch {
 
 		contentLower := strings.ToLower(content.Text)
 		for _, term := range t { //cycle through each term per alert content
-
-			if containsWholeWord(contentLower, term.Text) { //case is being ignored
+			termExists, count := containsWholeWord(contentLower, term.Text)
+			if termExists { //case is being ignored
 				termMatch := termMatch{
 					TermId:     strconv.Itoa(term.Id),
 					TermText:   term.Text,
-					Occurances: strings.Count(contentLower, term.Text), // Count occurrences of the term in content
+					Occurances: count, // occurrences of the term in content
 				}
 				alertTermMatch.AddItem(termMatch)
 			}
@@ -104,7 +104,7 @@ func (r *alertTermMatch) AddItem(tm termMatch) []termMatch {
 	return r.TermMatches
 }
 
-func containsWholeWord(c string, w string) bool {
+func containsWholeWord(c string, w string) (bool, int) {
 	// regular expression to match the word with word boundaries (\b)
 	// \b matches at the start or end of a word
 	pattern := fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(w))
@@ -112,6 +112,9 @@ func containsWholeWord(c string, w string) bool {
 	// Compile the regular expression
 	re := regexp.MustCompile(pattern)
 
-	// Check if the word exists in the text as a whole word
-	return re.MatchString(c)
+	// Find all matches in the input string
+	count := re.FindAllString(c, -1)
+
+	// Return whether a match was found and the count of matches
+	return len(count) > 0, len(count)
 }
