@@ -6,7 +6,7 @@ Query prewave apis and extract specific term information from text. This applica
 
 **Configuration**
 This application can be run against the real APIs or against test data contained in the _test_data_ folder. To run against available 
-APIs change the applciation.yaml _prewave.mode_ from test to production
+APIs change the applciation.yaml _prewave.mode_ from _test_ to _production_
 
 
 **Getting Started**
