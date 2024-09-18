@@ -35,7 +35,7 @@ Query prewave apis and extract specific term information from text
 		i. I have used regex.QuoteMeta is a function from the regexp package that escapes all special characters in a string so that the string can be used as a literal
 	d. Count the number of occurances that the term matches 
 5. Provide a readable summary of the analyis conducted
-	a. via output file 
+	a. via output file at root of repo: prewave_results.json
 	b. via http by invoking curl localhost:8080/results
 
 
