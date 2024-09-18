@@ -47,21 +47,21 @@ func main() {
 	}
 	fmt.Println("prewave query terms successfully retrieved")
 
-	//2. get test alerts from prewave API
-	alerts, err := extractor.getTestAlerts()
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(0)
-	}
-	fmt.Println("prewave test alerts successfully retrieved")
-
-	//3. scrub query terms for duplicates and lower case all term text to avoid false positives
+	//2. scrub query terms for duplicates and lower case all term text to avoid false positives
 	uniqueTerms, err := scrubQueryTerms(queryTerms)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(0)
 	}
 	fmt.Println("prewave query terms have been scrubbed")
+
+	//3. get test alerts from prewave API
+	alerts, err := extractor.getTestAlerts()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(0)
+	}
+	fmt.Println("prewave test alerts successfully retrieved")
 
 	//4. compare terms to each alert for matches
 	result, err := runMatchAnalysis(alerts, uniqueTerms)

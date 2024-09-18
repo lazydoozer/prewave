@@ -107,7 +107,11 @@ func (r *alertTermMatch) AddItem(tm termMatch) []termMatch {
 func containsWholeWord(c string, w string) (bool, int) {
 	// regular expression to match the word with word boundaries (\b)
 	// \b matches at the start or end of a word
-	pattern := fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(w))
+	//this dosnt work for tweets, # is not considered a word character according to the definition used by the \b
+	//pattern := fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(w))
+
+	// Adjust pattern to allow matching words starting with special characters
+	pattern := fmt.Sprintf(`(^|\s)%s($|\s)`, regexp.QuoteMeta(w))
 
 	// Compile the regular expression
 	re := regexp.MustCompile(pattern)

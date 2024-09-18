@@ -1,73 +1,8 @@
 {
-  "alerts_processed": 5,
-  "terms_scanned_per_alert": 24,
-  "created_date": "2024-09-18T14:20:53+01:00",
+  "alerts_processed": 1,
+  "terms_scanned_per_alert": 3,
+  "created_date": "2024-09-18T15:40:21+01:00",
   "results": [
-    {
-      "alert_id": "uktt4245t3t4334",
-      "alert_term_matches": [
-        {
-          "text": "Sales Punching faking sales numbers Hey, SEC, look at Tesla",
-          "term_matches": [
-            {
-              "id": "601",
-              "text": "tesla",
-              "occurances": 1
-            },
-            {
-              "id": "1102",
-              "text": "faking",
-              "occurances": 1
-            }
-          ]
-        },
-        {
-          "text": "Tesla Full Self Driving: New update now drives thru Green Lights and auto stops at Red Lights and Stop Signs without interaction. Full Self Self Driving everywhere getting oh so close. Here’s to the future",
-          "term_matches": [
-            {
-              "id": "501",
-              "text": "close",
-              "occurances": 1
-            },
-            {
-              "id": "601",
-              "text": "tesla",
-              "occurances": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "alert_id": "hz5n855393tn",
-      "alert_term_matches": [
-        {
-          "text": "MÜNCHEN (dpa-AFX) - Die IG Metall erwartet einen heißen Herbst mit vielen Auseinandersetzungen um Jobs in Deutschland. Es wird um viele Arbeitsplätze gehen, sagte Vorstandsmitglied und Hauptkassierer Jürgen Kerner am Mittwochabend in München. Alleine in den Branchen, für die die Gewerkschaft zuständig sei, stünden ungefähr 300 000 Jobs im Feuer. Der größte Bereich dabei seien die Automobilindustrie und deren Zulieferer, doch auch anderen Branchen seien betroffen.",
-          "term_matches": [
-            {
-              "id": "101",
-              "text": "ig metall",
-              "occurances": 1
-            },
-            {
-              "id": "103",
-              "text": "metall",
-              "occurances": 1
-            },
-            {
-              "id": "202",
-              "text": "arbeitsplätze",
-              "occurances": 1
-            },
-            {
-              "id": "204",
-              "text": "jobs",
-              "occurances": 2
-            }
-          ]
-        }
-      ]
-    },
     {
       "alert_id": "6gbujhu89786",
       "alert_term_matches": [
@@ -80,8 +15,8 @@
               "occurances": 1
             },
             {
-              "id": "103",
-              "text": "metall",
+              "id": "1207",
+              "text": "#strikeforblacklives",
               "occurances": 1
             }
           ]
