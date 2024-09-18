@@ -5,7 +5,9 @@ Prewave alert term extractor
 Query prewave apis and extract specific term information from text. This application can be run against the real APIs or against test data. 
 
 **Configuration**
-This application can be run against the real APIs or against test data. 
+This application can be run against the real APIs or against test data contained in the _test_data_ folder. To run against available 
+APIs change the applciation.yaml _prewave.mode_ from test to production
+
 
 **Getting Started**
 *Go enviornment*
