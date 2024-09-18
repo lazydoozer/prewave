@@ -24,7 +24,7 @@ Query prewave apis and extract specific term information from text
    &emsp; a. Convert to lowercase for case-insensitive processing  
    &emsp; b. Ensure only unique terms are made available for processing    
    &emsp; c. if KeepOrder is not requried   
-      &emsp; &emsp; &emsp; i. Splits the wuery term's text into individual words by space  
+      &emsp; &emsp; &emsp; i. Split the query term's text into individual words by space  
       &emsp; &emsp; &emsp; ii. convert to lowercase for case-insensitive processing  
       &emsp; &emsp; &emsp; iii. Ensure only unique terms that have been split are made available for processing  	  
 3. Retrieve the prewave test alerts from the HTTP API  
