@@ -11,8 +11,8 @@ Query prewave apis and extract specific term information from text
 
 *Docker*
 1. Build the docker image and host application  
-   &emsp; a. Navigate to root of repository and build image: docker build --tag prewave .  
-   &emsp; b. Start the prewave container and expose port 8080 to port 8080 on the host.  
+   &emsp; a. Navigate to root of repository and build image: _docker build --tag prewave .  _
+   &emsp; b. Start the prewave container and expose port 8080 to port 8080 on the host: _docker run --publish 8080:8080 prewave_
 
 **Output**
 1. A results file(prewave_results.json) will be genenated in the root of the repo
