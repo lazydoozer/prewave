@@ -6,8 +6,16 @@ Query prewave apis and extract specific term information from text. This applica
 
 **Configuration**
 This application can be run against the real APIs or against test data contained in the _test_data_ folder. To run against available 
-APIs change the applciation.yaml _prewave.mode_ from _test_ to _production_
+APIs change  _prewave.mode_ from _test_ to _production_ in the application.yaml in the config folder
 
+**Assumptions**
+1. I have understood keepOrder=false to mean that each part of a word can appear in any part of the alert term. I did not understand this to mean that the term text should be split and reordered if every order possible and those combinations should be matched. For example, term _"he likes cake"_ should be searched for by its parts and not by each possible commbination of the words, such as
+     term: he likes cake
+     term: he cake likes
+     term: likes he cake
+     term: likes cake he, etc
+2. I have not included any logic to handle term or alert language properties. I did not feel this was important in the context of searching for a term in a body of text.      
+3. I have assumed that Cat = cat and there should not be special consideration for case 
 
 **Getting Started**
 *Go enviornment*
