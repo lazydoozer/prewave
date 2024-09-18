@@ -20,23 +20,23 @@ Query prewave apis and extract specific term information from text
 
 **Approach**
 1. Retrieve the prewave query terms from the HTTP API
-2. Process the retrieved query terms 
-   a. Convert to lowercase for case-insensitive processing
-   b. Ensure only unique terms are made available for processing
-   c. if KeepOrder is not requried 
-      i. Splits the wuery term's text into individual words by space
-	  ii. convert to lowercase for case-insensitive processing
-	  iii. Ensure only unique terms that have been split are made available for processing	  
-3. Retrieve the prewave test alerts from the HTTP API
-4. Perform analyis of retrieve alerts to determines in which alert a query term occurs.
-	a. Process each content within an alert
-	b. Converts the content’s text to lowercase to perform case-insensitive comparisons.
-	c. For each term, check if the term exists as a whole word in the content.
-		i. I have used regex.QuoteMeta is a function from the regexp package that escapes all special characters in a string so that the string can be used as a literal
-	d. Count the number of occurances that the term matches 
-5. Provide a readable summary of the analyis conducted
-	a. via output file at root of repo: prewave_results.json
-	b. via http by invoking curl localhost:8080/results
+2. Process the retrieved query terms   
+   &emsp; a. Convert to lowercase for case-insensitive processing  
+   &emsp; b. Ensure only unique terms are made available for processing    
+   &emsp; c. if KeepOrder is not requried   
+      &emsp; &emsp; &emsp; i. Splits the wuery term's text into individual words by space  
+      &emsp; &emsp; &emsp; ii. convert to lowercase for case-insensitive processing  
+      &emsp; &emsp; &emsp; iii. Ensure only unique terms that have been split are made available for processing  	  
+3. Retrieve the prewave test alerts from the HTTP API  
+4. Perform analyis of retrieve alerts to determines in which alert a query term occurs  
+   &emsp; a. Process each content within an alert  
+   &emsp; b. Converts the content’s text to lowercase to perform case-insensitive comparisons  
+   &emsp; c. For each term, check if the term exists as a whole word in the content    
+      &emsp; &emsp; &emsp; i. regex.QuoteMeta which is a function that escapes all special characters in a string so that the string can be used as a literal  
+   &emsp; d. Count the number of occurances that the term matches 
+6. Provide a readable summary of the analyis conducted  
+   &emsp; a. via output file at root of repo: prewave_results.json  
+   &emsp; b. via http by invoking curl localhost:8080/results  
 
 
 
