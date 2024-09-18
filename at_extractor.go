@@ -14,7 +14,7 @@ import (
 )
 
 type extractor struct {
-	client  *api.ClientWithResponses
+	client  api.ClientInterface
 	context context.Context
 }
 
@@ -54,7 +54,7 @@ func (s *prewaveInterceptor) SetAPIKey(ctx context.Context, req *http.Request) e
 	return nil
 }
 
-func NewExtractor(c *api.ClientWithResponses, ctx context.Context) *extractor {
+func NewExtractor(c api.ClientInterface, ctx context.Context) *extractor {
 	return &extractor{client: c, context: ctx}
 }
 
