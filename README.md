@@ -34,7 +34,7 @@ APIs change  _prewave.mode_ from _test_ to _production_ in the application.yaml 
 **Approach**
 1. Retrieve the prewave query terms from the HTTP API
 2. Process the retrieved query terms   
-   &emsp; a. Convert to lowercase for case-insensitive processing[Dog = dog]
+   &emsp; a. Convert to lowercase for case-insensitive processing[Dog = dog]  
    &emsp; b. Ensure only unique terms are made available for processing    
    &emsp; c. if KeepOrder is not requried   
       &emsp; &emsp; &emsp; i. Split the query term's text into individual words by space  
