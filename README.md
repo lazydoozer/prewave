@@ -51,6 +51,6 @@ APIs change  _prewave.mode_ from _test_ to _production_ in the application.yaml 
    &emsp; a. via output file at root of repo: prewave_results.json  
    &emsp; b. via http by invoking curl localhost:8080/results  
 
-
-
+**Improvements**
+1. Run the ananlyis in parallel term <-chan
 
